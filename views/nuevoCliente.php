@@ -37,13 +37,13 @@ if ($usuario == null || $usuario == "" || $estado != "Activo") {
             <div class="container-fluid">
                 <ul class="opciones">
                     <li>
-                        <a class="active" href="nuevoCliente.php" style="font-size:medium;"><i class="fas fa-plus fa-fw"></i> &nbsp; REGISTRAR CLIENTE</a>
+                        <a class="active" href="nuevoCliente.php" style="font-size:15.5px!important;"><i class="fas fa-plus fa-fw"></i> &nbsp; REGISTRAR CLIENTE</a>
                     </li>
                     <li>
-                        <a href="listaClientes.php" style="font-size:medium;"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE CLIENTES</a>
+                        <a href="listaClientes.php" style="font-size:15.5px!important;"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE CLIENTES</a>
                     </li>
                     <li>
-                        <a href="buscarCliente.php" style="font-size:medium;"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR CLIENTE</a>
+                        <a href="buscarCliente.php" style="font-size:15.5px!important;"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR CLIENTE</a>
                     </li>
                 </ul>
             </div>
@@ -52,60 +52,57 @@ if ($usuario == null || $usuario == "" || $estado != "Activo") {
             <div class="container-fluid">
                 <form class="formulario" autocomplete="off" id="registrar_cliente" method="POST" enctype="multipart/form-data">
                     <fieldset>
-                        <legend style="font-size:large;"><i class="fas fa-user-plus"></i> &nbsp; Registro de Nuevo Cliente</legend>
+                        <legend><i class="fas fa-user-plus"></i> &nbsp; Registro de Nuevo Cliente</legend>
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-12 col-md-3">
                                     <div class="form-group">
                                         <label for="ci_cliente" class="bmd-label-floating">CI</label>
-                                        <input type="text" pattern="[0-9]{5,15}" class="form-control" name="carnet_cliente" id="ci_cliente input" maxlength="15" required style="font-size:15px;">
+                                        <input type="text" pattern="[0-9]{5,13}" class="form-control" name="carnet_cliente" id="ci_cliente input" maxlength="13" required style="font-size:14px;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-2">
+                                    <div class="form-group">
+                                        <label for="ci_extcliente" class="bmd-label-floating">Ext.</label>
+                                        <input type="text" pattern="[A-Z.]{1,4}" class="form-control" name="extension_cliente" id="ci_ext_cliente input" maxlength="4" required style="font-size:14px;">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-3">
                                     <div class="form-group">
-                                        <label for="ci_extcliente" class="bmd-label-floating">Extensión</label>
-                                        <input type="text" pattern="[A-Z.]{1,4}" class="form-control" name="extension_cliente" id="ci_ext_cliente input" maxlength="4" required style="font-size:15px;">
+                                        <label for="apP_cliente" class="bmd-label-floating">Paterno</label>
+                                        <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,50}" class="form-control" name="apellidoP_cliente" id="apP_cliente_input" maxlength="50" style="font-size:14px;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <div class="form-group">
+                                        <label for="apM_cliente" class="bmd-label-floating">Materno</label>
+                                        <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,50}" class="form-control" name="apellidoM_cliente" id="apM_cliente_input" maxlength="50" required style="font-size:14px;">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-12 col-md-4">
-                                    <div class="form-group">
-                                        <label for="apP_cliente" class="bmd-label-floating">Apellido Paterno</label>
-                                        <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,50}" class="form-control" name="apellidoP_cliente" id="apP_cliente_input" maxlength="50" style="font-size:15px;">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-4">
-                                    <div class="form-group">
-                                        <label for="apM_cliente" class="bmd-label-floating">Apellido Materno</label>
-                                        <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,50}" class="form-control" name="apellidoM_cliente" id="apM_cliente_input" maxlength="50" required style="font-size:15px;">
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-md-4">
+                                <div class="col-12 col-md-3">
                                     <div class="form-group">
                                         <label for="nom_cliente" class="bmd-label-floating">Nombre</label>
-                                        <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,50}" class="form-control" name="nombre_cliente" id="nom_cliente_input" maxlength="50" required style="font-size:15px;">
+                                        <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,50}" class="form-control" name="nombre_cliente" id="nom_cliente_input" maxlength="50" required style="font-size:14px;">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-md-4">
+                                <div class="col-12 col-md-2">
                                     <div class="form-group">
                                         <label for="cel_cliente" class="bmd-label-floating">Celular</label>
-                                        <input type="text" pattern="[0-9()+]{8,11}" class="form-control" name="celular_cliente" id="cel_cliente_input" maxlength="11" required style="font-size:15px;">
+                                        <input type="text" pattern="[0-9()+]{8,11}" class="form-control" name="celular_cliente" id="cel_cliente_input" maxlength="11" required style="font-size:14px;">
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4">
+                                <div class="col-12 col-md-3">
                                     <div class="form-group">
                                         <label for="dir_cliente" class="bmd-label-floating">Dirección</label>
-                                        <input type="text" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,#\s-]{10,100}" class="form-control" name="direccion_cliente" id="dir_cliente_input" maxlength="100" required style="font-size:15px;">
+                                        <input type="text" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,#\s-]{10,100}" class="form-control" name="direccion_cliente" id="dir_cliente_input" maxlength="100" required style="font-size:14px;">
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4">
+                                <div class="col-12 col-md-3">
                                     <div class="form-group">
-                                        <label for="empleo_cliente" class="bmd-label-floating">Tipo Empleo</label>
-                                        <select name="tipoEmpleoSel" class="form-select" required id="tipoEmpleo_cliente_selecc" style="font-size:15px;">
+                                        <label for="empleo_cliente" class="bmd-label-floating">Empleo</label>
+                                        <select name="tipoEmpleoSel" class="form-select" required id="tipoEmpleo_cliente_selecc" style="font-size:14px;">
                                             <option value="" selected>Seleccionar</option>
                                             <option value="1">Asalariado</option>
                                             <option value="2">Comerciante</option>

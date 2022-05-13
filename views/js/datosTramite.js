@@ -1,6 +1,8 @@
 $(document).ready(function() {
     var indice = 0;
+    var index;
     var idtramite = document.getElementById("id_tramite").value;
+
     var matrizVehiculos = [];
     var vehiculo = [];
     var idfolderC;
@@ -28,6 +30,7 @@ $(document).ready(function() {
             dataType: "JSON",
             async: false,
         }).done(function(res) {
+            console.log(res);
             var tablaC = document.getElementById("tablaCliente");
             $("#tablaCliente tr").remove();
             var row = tablaC.insertRow(0);
@@ -42,6 +45,7 @@ $(document).ready(function() {
             $("#asesor_credito_id").val(res[0]["asesor_credito"]);
             $("#sucursal_banco_id").val(res[0]["sucursal"]);
             $("#observacion_id").val(res[0]["observacion"]);
+            document.getElementById('id_cliente').value = res[0]['cliente'];
             var i;
             for (i = 2; i <= res.length - 1; i++) {
                 vehiculo.push(res[i]["marca"]);
@@ -49,6 +53,7 @@ $(document).ready(function() {
                 vehiculo.push(res[i]["tipo"]);
                 vehiculo.push(res[i]["color"]);
                 vehiculo.push(res[i]["nump"]);
+                vehiculo.push(res[i]["cilindrada"]);
                 vehiculo.push(res[i]["precio"]);
                 matrizVehiculos.splice(indice, 0, { vehiculo });
                 indice++;
@@ -66,11 +71,6 @@ $(document).ready(function() {
                     '&nbsp;&nbsp;<button type="button" class="btn botonElimina btn-danger" id="idquitaV" name="quitaV" ><i class="far fa-trash-alt"></i></button>' +
                     '&nbsp;&nbsp;<button type="button" class="btn botonEdita btn-secondary" id="ideditaV" name="editaV" ><i class="fas fa-edit "></i></button>';
             }
-            $(document).on('click', '#idquitaV', function(event) {
-                var index = $(this).closest("tr").index();
-                $(this).closest("tr").remove();
-                matrizVehiculos.splice(index, 1);
-            });
             var botonaddAuto = document.getElementById('idAddAuto');
             botonaddAuto.addEventListener('click', insertarFila, true);
         });
@@ -165,7 +165,8 @@ $(document).ready(function() {
             $('#tipoid').val(auxi[0][2]);
             $('#colorid').val(auxi[0][3]);
             $('#numpasid').val(auxi[0][4]);
-            $('#precioid').val(auxi[0][5]);
+            $('#cilid').val(auxi[0][5]);
+            $('#precioid').val(auxi[0][6]);
             var botonaddAuto = document.getElementById('idEditVe');
             botonaddAuto.addEventListener('click', editarVehiculo, true);
 
@@ -175,6 +176,7 @@ $(document).ready(function() {
                 var tipon = document.getElementById("tipoid").value;
                 var colorn = document.getElementById("colorid").value;
                 var numpasn = document.getElementById("numpasid").value;
+                var ciln = document.getElementById("cilid").value;
                 var precion = document.getElementById("precioid").value;
                 vehiculo = [];
                 vehiculo.push(marcan);
@@ -182,6 +184,7 @@ $(document).ready(function() {
                 vehiculo.push(tipon);
                 vehiculo.push(colorn);
                 vehiculo.push(numpasn);
+                vehiculo.push(ciln);
                 vehiculo.push(precion);
                 console.log(index);
                 //$(this).closest("tr").remove();
@@ -202,8 +205,29 @@ $(document).ready(function() {
             var tipo = document.getElementById('tipo_selec').value;
             var color = document.getElementById('color_selec').value;
             var numpas = document.getElementById('numpas_selec').value;
+            var cilindrada = document.getElementById('cilindrada_selec').value;
             var precio = document.getElementById('precio_selec').value;
 
+            if (modelo.trim() == "Otro") {
+                modelo = document.getElementById('modelo_autoOtro').value;
+
+            }
+            if (tipo.trim() == "Otro") {
+                tipo = document.getElementById('tipo_autoOtro').value;
+
+            }
+            if (color.trim() == "Otro") {
+                color = document.getElementById('color_autoOtro').value;
+
+            }
+            if (numpas.trim() == "Otro") {
+                numpas = document.getElementById('num_autoOtro').value;
+
+            }
+            if (cilindrada.trim() == "Otro") {
+                cilindrada = document.getElementById('cilindrada_autoOtro').value;
+
+            }
             if (precio.trim() == "Otro") {
                 precio = document.getElementById('precio_autoOtro').value;
 
@@ -226,6 +250,7 @@ $(document).ready(function() {
                 vehiculo.push(tipo);
                 vehiculo.push(color);
                 vehiculo.push(numpas);
+                vehiculo.push(cilindrada);
                 vehiculo.push(precio);
                 matrizVehiculos.splice(indice++, 0, { vehiculo });
                 vehiculo = [];
@@ -313,6 +338,15 @@ $(document).ready(function() {
 
             }
         }
+        $(document).on('click', '#idquitaV', function(event) {
+            index = $(this).closest("tr").index();
+            $(this).closest("tr").remove();
+            matrizVehiculos.splice(index, 1);
+            console.log(matrizVehiculos);
+            actualizarTramite();
+        });
+
+
     }
 
     function folderCliente() {
@@ -3945,12 +3979,14 @@ $(document).ready(function() {
         }
 
     }
+
     $(document).on('click', '#boton_guardar_id', function(event) {
         event.preventDefault();
         actualizarTramite();
     });
 
     function actualizarTramite(evento) {
+
         form = $("#ac_reg_tramite");
         form.submit(actualizarTramite);
         var bancosDCliente = [];
@@ -4014,7 +4050,8 @@ $(document).ready(function() {
                                 window.location = "listaTramites.php";
                             } else {
                                 if (result.isConfirmed) {
-                                    if (matrizVehiculos.length > 0) {
+                                    var idcliente = document.getElementById('id_cliente').value
+                                    if (idcliente !== "" && matrizVehiculos.length > 0) {
                                         var idT = document.getElementById("id_tramite").value;
                                         var tramite = new FormData($(form)[0]);
                                         tramite.append('idtramite', idT);
@@ -4035,12 +4072,9 @@ $(document).ready(function() {
                                         for (var i = 0; i < matrizVehiculos.length; i++) {
                                             var rev = Object.values(matrizVehiculos[i]);
                                             var arr = Object.values(rev[0]);
-                                            total = total + parseInt(arr[5], 10);
+                                            total = total + parseInt(arr[6], 10);
                                         }
-                                        monto = parseInt(monto);
-                                        total = parseInt(total);
-                                        console.log(monto);
-                                        console.log(total);
+
                                         if (monto >= total) {
                                             $.ajax({
                                                 url: '../scripts/actualizarTramite.php',
@@ -4077,7 +4111,12 @@ $(document).ready(function() {
                                         }
 
                                     } else {
-                                        alert("No hay vehiculos");
+                                        Swal.fire({
+                                            icon: 'error',
+                                            title: 'Error',
+                                            text: 'Debe elegir un cliente y el vehiculo!',
+
+                                        })
 
                                     }
 

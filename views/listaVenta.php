@@ -38,14 +38,14 @@ $sumaTotal = 0;
             <div class="container-fluid">
                 <ul class="opciones">
                     <li>
-                        <a href="nuevaVenta.php" style="font-size:medium;"><i class="fas fa-plus fa-fw"></i> &nbsp; REGISTRAR VENTA</a>
+                        <a href="nuevaVenta.php" style="font-size:15.5px!important;"><i class="fas fa-plus fa-fw"></i> &nbsp; REGISTRAR VENTA</a>
                     </li>
                     <li>
-                        <a class="active" href="listaVenta.php" style="font-size:medium;"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA
+                        <a class="active" href="listaVenta.php" style="font-size:15.5px!important;"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA
                             DE VENTAS</a>
                     </li>
                     <li>
-                        <a href="buscaVenta.php" style="font-size:medium;"><i class="fas fa-search fa-fw"></i>&nbsp; BUSCA VENTA</a>
+                        <a href="buscaVenta.php" style="font-size:15.5px!important;"><i class="fas fa-search fa-fw"></i>&nbsp; BUSCA VENTA</a>
                     </li>
                 </ul>
             </div>

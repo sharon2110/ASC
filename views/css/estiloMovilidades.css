@@ -82,7 +82,7 @@ label {
     color: rgb(109, 106, 106);
     padding-top: 10px;
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: 13px!important;
 }
 
 .botonLimpiar {
@@ -296,6 +296,10 @@ body #perfil img {
     width: 15%;
     margin-left: 100px;
     margin-top: 8px;
+}
+
+legend {
+    font-size: 17px;
 }
 
 

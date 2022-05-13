@@ -41,11 +41,11 @@ if ($tusu !== "Administrador") {
             <div class="container-fluid">
                 <ul class="opciones">
                     <li>
-                        <a href="nuevoAsesor.php" style="font-size:medium;"><i class="fas fa-plus fa-fw"></i> &nbsp; REGISTRAR
+                        <a href="nuevoAsesor.php" style="font-size:15.5px!important;"><i class="fas fa-plus fa-fw"></i> &nbsp; REGISTRAR
                             ASESOR</a>
                     </li>
                     <li>
-                        <a class="active" href="listaAsesores.php" style="font-size:medium;"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp;
+                        <a class="active" href="listaAsesores.php" style="font-size:15.5px!important;"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp;
                             LISTA DE
                             ASESORES</a>
                     </li>
@@ -59,7 +59,7 @@ if ($tusu !== "Administrador") {
                 <div class="table-responsive contenedorTabla">
                     <table class="table table-sm tabla" id="tablaResId">
                         <thead>
-                            <tr class="text-center" style="font-size:14px;">
+                            <tr class="text-center" style="font-size:13.5px;">
                                 <th>#</th>
                                 <th hidden></th>
                                 <th>CI</th>
@@ -84,7 +84,7 @@ if ($tusu !== "Administrador") {
 
 
                             ?>
-                                    <tr class="text-center" style="font-size:14px;">
+                                    <tr class="text-center" style="font-size:13.5px;">
                                         <td><?php
                                             echo $cont;
                                             $cont = $cont + 1;

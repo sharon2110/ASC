@@ -31,6 +31,19 @@ $resultado = $sentencia->fetch();
         <br>
         <nav class="contenidoMenu">
             <ul>
+                <?php if ($tusu == "Administrador") : ?>
+                    <li>
+                        <span class="item-menu" href="#" id="mostrarSub" style="font-size: 16px;"><i class="fas fa-user-tie fa-fw"></i>&nbsp; Asesores <i class="fas fa-chevron-down"></i></span>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="nuevoAsesor.php" style="font-size: 16px;"><i class="fas fa-plus fa-fw"></i>&nbsp; Registrar Asesor</a>
+                            </li>
+                            <li>
+                                <a href="listaAsesores.php" style="font-size: 16px;"><i class="fas fa-clipboard-list fa-fw"></i>&nbsp;Lista de Asesores</a>
+                            </li>
+                        </ul>
+                    </li>
+                <?php endif ?>
                 <li>
                     <span class="item-menu" href="#" id="mostrarSub" style="font-size: 16px;"><i class="fas fa-users fa-fw"></i>&nbsp; Clientes <i class="fas fa-chevron-down"></i></span>
                     <ul class="sub-menu">
@@ -45,20 +58,6 @@ $resultado = $sentencia->fetch();
                         </li>
                     </ul>
                 </li>
-                <?php if ($tusu == "Administrador") : ?>
-                    <li>
-                        <span class="item-menu" href="#" id="mostrarSub" style="font-size: 16px;"><i class="fas fa-user-tie"></i>&nbsp; Asesores <i class="fas fa-chevron-down"></i></span>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="nuevoAsesor.php" style="font-size: 16px;"><i class="fas fa-plus fa-fw"></i>&nbsp; Registrar Asesor</a>
-                            </li>
-                            <li>
-                                <a href="listaAsesores.php" style="font-size: 16px;"><i class="fas fa-clipboard-list fa-fw"></i>&nbsp;Lista de Asesores</a>
-                            </li>
-                        </ul>
-                    </li>
-                <?php endif ?>
-
                 <li>
                     <span class="item-menu" href="#" id="mostrarSub" style="font-size: 16px;"><i class="fas fa-hand-holding-usd fa-fw"></i>&nbsp;Ventas <i class="fas fa-chevron-down"></i></span>
                     <ul class="sub-menu">

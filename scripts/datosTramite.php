@@ -3,7 +3,7 @@
 include '../scripts/conexion.php';
 $idT = $_POST["idtramite"];
 
-$sql = "SELECT c.paterno,c.materno,c.nombre,b.banco,t.monto_prestamo,t.asesor_credito,t.sucursal,t.observacion from tramitebancario t 
+$sql = "SELECT t.cliente,c.paterno,c.materno,c.nombre,b.banco,t.monto_prestamo,t.asesor_credito,t.sucursal,t.observacion from tramitebancario t 
 inner join cliente c 
 on c.idcliente = t.cliente 
 inner join banco b 
@@ -14,7 +14,7 @@ $sentencia->bindValue(1, $idT, PDO::PARAM_STR);
 $sentencia->execute();
 $resultado = $sentencia->fetchAll();
 
-$sql1 = "SELECT dt.marca,dt.modelo,dt.tipo,dt.color,dt.nump,dt.precio from detalle_tramite dt 
+$sql1 = "SELECT dt.marca,dt.modelo,dt.tipo,dt.color,dt.nump,dt.cilindrada,dt.precio from detalle_tramite dt 
 where dt.tramite =?";
 $sentencia1 = $con->prepare($sql1);
 $sentencia1->bindValue(1, $idT, PDO::PARAM_STR);

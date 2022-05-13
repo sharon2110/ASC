@@ -41,15 +41,15 @@ if ($usuario == null || $usuario == "" || $estado != "Activo") {
                 <ul class="opciones">
                     <?php if ($tusu == "Administrador") : ?>
                         <li>
-                            <a href="nuevaMovilidad.php" style="font-size:medium;"><i class="fas fa-plus fa-fw"></i> &nbsp; REGISTRAR VEHÍCULO</a>
+                            <a href="nuevaMovilidad.php" style="font-size:15.5px!important;"><i class="fas fa-plus fa-fw"></i> &nbsp; REGISTRAR VEHÍCULO</a>
                         </li>
                     <?php endif ?>
                     <li>
-                        <a class="active" href="listaMovilidad.php" style="font-size:medium;"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp;
+                        <a class="active" href="listaMovilidad.php" style="font-size:15.5px!important;"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp;
                             LISTA DE VEHÍCULOS</a>
                     </li>
                     <li>
-                        <a href="busquedaMovilidad.php" style="font-size:medium;"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR VEHÍCULO</a>
+                        <a href="busquedaMovilidad.php" style="font-size:15.5px!important;"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR VEHÍCULO</a>
                     </li>
                 </ul>
             </div>

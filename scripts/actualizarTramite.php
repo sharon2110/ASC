@@ -35,15 +35,17 @@ if ($resultado) {
     $tipo = $v[2];
     $color = $v[3];
     $numpas = $v[4];
-    $precio = $v[5];
-    $sentencia4 = $con->prepare("INSERT INTO detalle_tramite(tramite,marca,modelo,tipo,color,nump,precio) VALUES (:idTramite, :marca,:modelo,
-     :tipo, :color,:numpas,:precio);");
+    $cilindrada = $v[5];
+    $precio = $v[6];
+    $sentencia4 = $con->prepare("INSERT INTO detalle_tramite(tramite,marca,modelo,tipo,color,nump,cilindrada, precio) VALUES (:idTramite, :marca,:modelo,
+     :tipo, :color,:numpas,:cilindrada,:precio);");
     $sentencia4->bindParam(':idTramite', $tramite, PDO::PARAM_INT);
     $sentencia4->bindParam(':marca', $marca, PDO::PARAM_STR);
     $sentencia4->bindParam(':modelo', $modelo, PDO::PARAM_STR);
     $sentencia4->bindParam(':tipo', $tipo, PDO::PARAM_STR);
     $sentencia4->bindParam(':color', $color, PDO::PARAM_STR);
     $sentencia4->bindParam(':numpas', $numpas, PDO::PARAM_INT);
+    $sentencia4->bindParam(':cilindrada', $cilindrada, PDO::PARAM_STR);
     $sentencia4->bindParam(':precio', $precio, PDO::PARAM_STR);
     $resultado4 = $sentencia4->execute();
   }

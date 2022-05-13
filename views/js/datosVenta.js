@@ -17,7 +17,7 @@ $(document).ready(function() {
             dataType: "JSON",
 
         }).done(function(res) {
-            console.log(res[0][2]);
+            console.log(res);
             // DATOS CLIENTE
             var tablaC = document.getElementById("tablaCliente");
             $("#tablaCliente tr").remove();
@@ -38,6 +38,7 @@ $(document).ready(function() {
                 vehiculo.push(res[i]["tipo"]);
                 vehiculo.push(res[i]["color"]);
                 vehiculo.push(res[i]["nump"]);
+                vehiculo.push(res[i]["cilindrada"]);
                 vehiculo.push(res[i]["precio"]);
                 vehiculo.push(res[i]["tipo_venta"]);
                 vehiculo.push(res[i]["contacto"]);
@@ -89,25 +90,26 @@ $(document).ready(function() {
         $('#tipoid').val(auxi[0][2]);
         $('#colorid').val(auxi[0][3]);
         $('#numpasid').val(auxi[0][4]);
-        $('#precioid').val(auxi[0][5]);
-        $('#tipoVenta_selecid').val(auxi[0][6]);
-        if (auxi[0][6] !== "Al contado") {
+        $('#cilid').val(auxi[0][5]);
+        $('#precioid').val(auxi[0][6]);
+        $('#tipoVenta_selecid').val(auxi[0][7]);
+        if (auxi[0][7] !== "Al contado") {
             $('#contactoid').prop('disabled', false);
-            $('#contactoid').val(auxi[0][7]);
-        }
-        if (auxi[0][8] == "si") {
-            $('#CheckRuatid').prop("checked", true);
+            $('#contactoid').val(auxi[0][8]);
         }
         if (auxi[0][9] == "si") {
-            $('#CheckPolizaid').prop("checked", true);
+            $('#CheckRuatid').prop("checked", true);
         }
         if (auxi[0][10] == "si") {
-            $('#CheckSoatid').prop("checked", true);
+            $('#CheckPolizaid').prop("checked", true);
         }
         if (auxi[0][11] == "si") {
-            $('#CheckPlacaid').prop("checked", true);
+            $('#CheckSoatid').prop("checked", true);
         }
         if (auxi[0][12] == "si") {
+            $('#CheckPlacaid').prop("checked", true);
+        }
+        if (auxi[0][13] == "si") {
             $('#CheckTransitoid').prop("checked", true);
         }
         var botonaddAuto = document.getElementById('idEditVe');
@@ -122,6 +124,7 @@ $(document).ready(function() {
             var tipon = document.getElementById("tipoid").value;
             var colorn = document.getElementById("colorid").value;
             var numpasn = document.getElementById("numpasid").value;
+            var ciln = document.getElementById("cilid").value;
             var precion = document.getElementById("precioid").value;
             var tventan = document.getElementById("tipoVenta_selecid").value;
             if (tventan !== "Al contado") {
@@ -140,6 +143,7 @@ $(document).ready(function() {
             vehiculo.push(tipon);
             vehiculo.push(colorn);
             vehiculo.push(numpasn);
+            vehiculo.push(ciln);
             vehiculo.push(precion);
             vehiculo.push(tventan);
             vehiculo.push(contacton);
@@ -190,6 +194,7 @@ $(document).ready(function() {
         var tipo = document.getElementById('tipo_selec').value;
         var color = document.getElementById('color_selec').value;
         var numpas = document.getElementById('numpas_selec').value;
+        var cilindrada = document.getElementById('cilindrada_selec').value;
         var precio = document.getElementById('precio_selec').value;
         var tventa = document.getElementById('tipoVenta_selec').value;
         var contacto = document.getElementById('idContacto').value;
@@ -202,12 +207,20 @@ $(document).ready(function() {
             modelo = document.getElementById('modelo_autoOtro').value;
 
         }
+        if (tipo.trim() == "Otro") {
+            tipo = document.getElementById('tipo_autoOtro').value;
+
+        }
         if (color.trim() == "Otro") {
             color = document.getElementById('color_autoOtro').value;
 
         }
         if (numpas.trim() == "Otro") {
             numpas = document.getElementById('num_autoOtro').value;
+
+        }
+        if (cilindrada.trim() == "Otro") {
+            cilindrada = document.getElementById('cilindrada_autoOtro').value;
 
         }
         if (precio.trim() == "Otro") {
@@ -261,7 +274,7 @@ $(document).ready(function() {
 
         } else {
 
-            if (marca != "" && modelo != "" && color != "" && numpas != "" && precio != "" && tventa != "" && contacto != "" && ruat && poliza && placa && transito) {
+            if (marca != "" && modelo != "" && color != "" && numpas != "" && precio != "" && tventa != "" && contacto != "") {
                 if (tventa.trim() == "Con crédito") {
                     verificaContrato();
                 } else {
@@ -296,6 +309,7 @@ $(document).ready(function() {
             vehiculo.push(tipo);
             vehiculo.push(color);
             vehiculo.push(numpas);
+            vehiculo.push(cilindrada);
             vehiculo.push(precio);
             vehiculo.push(tventa);
             vehiculo.push(contacto);
@@ -443,13 +457,11 @@ $(document).ready(function() {
                     title: 'Error',
                     text: "El cliente no tiene un trámite o no firmó el contrato!",
                     icon: 'error',
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Ok!'
+
                 }).then((result) => {
                     setTimeout(function() {
                         location.reload();
-                    }, 1600);
+                    }, 1000);
                     if (result.isConfirmed) {}
                 })
 

@@ -38,14 +38,14 @@ if ($usuario == null || $usuario == "" || $estado != "Activo") {
             <div class="container-fluid">
                 <ul class="opciones">
                     <li>
-                        <a href="nuevoCliente.php" style="font-size:medium;"><i class="fas fa-plus fa-fw"></i> &nbsp; REGISTRAR CLIENTE</a>
+                        <a href="nuevoCliente.php" style="font-size:15.5px!important;"><i class="fas fa-plus fa-fw"></i> &nbsp; REGISTRAR CLIENTE</a>
                     </li>
                     <li>
-                        <a href="listaClientes.php" style="font-size:medium;"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE
+                        <a href="listaClientes.php" style="font-size:15.5px!important;"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE
                             CLIENTES</a>
                     </li>
                     <li>
-                        <a class="active" href="buscarCliente.php" style="font-size:medium;"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR
+                        <a class="active" href="buscarCliente.php" style="font-size:15.5px!important;"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR
                             CLIENTE</a>
                     </li>
                 </ul>
@@ -62,7 +62,7 @@ if ($usuario == null || $usuario == "" || $estado != "Activo") {
                                     <label for="inputSearch" class="bmd-label-floating labelBusqueda">
                                         CI</label>
                                     <input type="text" class="form-control" pattern="[0-9]{5,10}" name="busquedaCI"
-                                        id="inputCi" maxlength="10" style="font-size:15px;">
+                                        id="inputCi" maxlength="10" style="font-size:14px;">
                                 </div>
                             </div>
 
@@ -70,7 +70,7 @@ if ($usuario == null || $usuario == "" || $estado != "Activo") {
                                 <div class="form-group">
                                     <label for="inputSearch" class="bmd-label-floating labelBusqueda">
                                         Nombre</label>
-                                    <input type="text" class="form-control" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,80}"  maxlength="80" name="busquedaN" id="inputNom" style="font-size:15px;">
+                                    <input type="text" class="form-control" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,80}"  maxlength="80" name="busquedaN" id="inputNom" style="font-size:14px;">
                                 </div>
                             </div>
                             <div class="col-12 col-md-4">
@@ -89,7 +89,7 @@ if ($usuario == null || $usuario == "" || $estado != "Activo") {
                 <div class="table-responsive contenedorTabla tablaresbus" id="idtablabus">
                     <table class="table table-sm tabla">
                         <thead>
-                            <tr class="text-center" style="font-size:14px;">
+                            <tr class="text-center" style="font-size:13.5px;">
                                 <th>#</th>
                                 <th>CI</th>
                                 <th>Paterno</th>
@@ -204,7 +204,7 @@ if ($usuario == null || $usuario == "" || $estado != "Activo") {
 
                             ?>
 
-                            <tr class="text-center" style="font-size:14px;">
+                            <tr class="text-center" style="font-size:13.5px;">
                                 <td><?= $cont++ ?></td>
                                 <td><?= $cliente[2] ?></td>
                                 <td><?= $cliente[4] ?></td>

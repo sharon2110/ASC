@@ -37,14 +37,14 @@ if ($usuario == null || $usuario == "" || $estado != "Activo") {
             <div class="container-fluid">
                 <ul class="opciones">
                     <li>
-                        <a href="nuevoCredito.php" style="font-size:medium;"><i class="fas fa-plus fa-fw"></i> &nbsp; NUEVO TRÁMITE</a>
+                        <a href="nuevoCredito.php" style="font-size:15.5px!important;"><i class="fas fa-plus fa-fw"></i> &nbsp; NUEVO TRÁMITE</a>
                     </li>
                     <li>
-                        <a href="listaTramites.php" style="font-size:medium;"><i class="fas fa-clipboard-list fa-fw"></i>&nbsp;LISTA TRÁMITES
+                        <a href="listaTramites.php" style="font-size:15.5px!important;"><i class="fas fa-clipboard-list fa-fw"></i>&nbsp;LISTA TRÁMITES
                         </a>
                     </li>
                     <li>
-                        <a class="active" href="buscaTramite.php" style="font-size:medium;"><i class="fas fa-search fa-fw"></i>&nbsp;&nbsp;&nbsp;BUSCAR TRÁMITE
+                        <a class="active" href="buscaTramite.php" style="font-size:15.5px!important;"><i class="fas fa-search fa-fw"></i>&nbsp;&nbsp;&nbsp;BUSCAR TRÁMITE
                         </a>
                     </li>
                 </ul>

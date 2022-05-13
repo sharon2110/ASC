@@ -38,11 +38,11 @@ if ($usuario == null || $usuario == "" || $estado != "Activo") {
             <div class="container-fluid">
                 <ul class="opciones">
                     <li>
-                        <a class="active" href="nuevoAsesor.php" style="font-size:medium;"><i
+                        <a class="active" href="nuevoAsesor.php" style="font-size:15.5px!important;"><i
                                 class="fas fa-plus fa-fw"></i> &nbsp; REGISTRAR ASESOR</a>
                     </li>
                     <li>
-                        <a href="listaAsesores.php" style="font-size:medium;"><i
+                        <a href="listaAsesores.php" style="font-size:15.5px!important;"><i
                                 class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE ASESORES</a>
                     </li>
                 </ul>
@@ -53,7 +53,7 @@ if ($usuario == null || $usuario == "" || $estado != "Activo") {
                 <form action="" class="formulario" autocomplete="off" id="registrar_usuario" method="POST"
                     enctype="multipart/form-data">
                     <fieldset>
-                        <legend style="font-size:large;"><i class="fas fa-user-plus"></i> &nbsp; Registro de Nuevo
+                        <legend><i class="fas fa-user-plus"></i> &nbsp; Registro de Nuevo
                             Asesor</legend>
                         <div class="container-fluid">
                             <div class="row">
@@ -62,31 +62,31 @@ if ($usuario == null || $usuario == "" || $estado != "Activo") {
                                         <label for="ci_asesor" class="bmd-label-floating">CI</label>
                                         <input type="text" pattern="[0-9-]{5,15}" class="form-control"
                                             name="carnet_asesor" id="ci_asesor input" maxlength="15" required
-                                            style="font-size:15px;">
+                                            style="font-size:14px;">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-2">
                                     <div class="form-group">
-                                        <label for="ci_extasesor" class="bmd-label-floating">Exp.</label>
+                                        <label for="ci_extasesor" class="bmd-label-floating">Ext.</label>
                                         <input type="text" pattern="[A-Z.]{1,4}" class="form-control"
                                             name="extension_asesor" id="ci_cliente input" maxlength="4" required
-                                            style="font-size:15px;">
+                                            style="font-size:14px;">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-3">
                                     <div class="form-group">
-                                        <label for="apP_asesor" class="bmd-label-floating">Apellido Paterno</label>
+                                        <label for="apP_asesor" class="bmd-label-floating">Paterno</label>
                                         <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,50}" class="form-control"
                                             name="apellidoP_asesor" id="apP_asesor" maxlength="50"
-                                            style="font-size:15px;">
+                                            style="font-size:14px;">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-3">
                                     <div class="form-group">
-                                        <label for="apM_asesor" class="bmd-label-floating">Apellido Materno</label>
+                                        <label for="apM_asesor" class="bmd-label-floating">Materno</label>
                                         <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,50}" class="form-control"
                                             name="apellidoM_asesor" id="apM_asesor" maxlength="50" required
-                                            style="font-size:15px;">
+                                            style="font-size:14px;">
                                     </div>
                                 </div>
                             </div>
@@ -96,7 +96,7 @@ if ($usuario == null || $usuario == "" || $estado != "Activo") {
                                         <label for="nom_asesor" class="bmd-label-floating">Nombre</label>
                                         <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,50}" class="form-control"
                                             name="nombre_asesor" id="nom_asesor" maxlength="50" required
-                                            style="font-size:15px;">
+                                            style="font-size:14px;">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-2">
@@ -104,32 +104,32 @@ if ($usuario == null || $usuario == "" || $estado != "Activo") {
                                         <label for="cel_asesor" class="bmd-label-floating">Celular</label>
                                         <input type="text" pattern="[0-9()+]{8,11}" class="form-control"
                                             name="celular_asesor" id="cel_asesor" maxlength="11" required
-                                            style="font-size:15px;">
+                                            style="font-size:14px;">
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4">
+                                <div class="col-12 col-md-3">
                                     <div class="form-group">
                                         <label for="dir_asesor" class="bmd-label-floating">Dirección</label>
                                         <input type="text" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,#\s-]{10,100}"
                                             class="form-control" name="direccion_asesor" id="dir_asesor" maxlength="100"
-                                            required style="font-size:15px;">
+                                            required style="font-size:14px;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <div class="form-group">
+                                        <label for="usuario_asesor" class="bmd-label-floating">Usuario</label>
+                                        <input type="text" pattern="[a-zA-Z0-9s-]{4,10}" class="form-control"
+                                            name="usuario_asesor" id="usuario_asesor" maxlength="10" required
+                                            style="font-size:14px;">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12 col-md-3">
                                     <div class="form-group">
-                                        <label for="usuario_asesor" class="bmd-label-floating">Usuario</label>
-                                        <input type="text" pattern="[a-zA-Z0-9s-]{4,10}" class="form-control"
-                                            name="usuario_asesor" id="usuario_asesor" maxlength="10" required
-                                            style="font-size:15px;">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-4">
-                                    <div class="form-group">
                                         <label for="tipo_usuario" class="bmd-label-floating">Tipo Usuario</label>
                                         <select class="form-select" aria-label="Default select example" required
-                                            name="tipo_usu" style="font-size:15px;">
+                                            name="tipo_usu" style="font-size:14px;">
                                             <option selected>Seleccionar</option>
                                             <option value="Administrador">Administrador</option>
                                             <option value="Restringido">Restringido</option>
@@ -140,7 +140,7 @@ if ($usuario == null || $usuario == "" || $estado != "Activo") {
                                     <div class="form-group">
                                         <label for="estado_usuario" class="bmd-label-floating">Estado</label>
                                         <select class="form-select" aria-label="Default select example" required
-                                            name="estado" style="font-size:15px;">
+                                            name="estado" style="font-size:14px;">
                                             <option selected>Seleccionar</option>
                                             <option value="Activo">Activo</option>
                                             <option value="Inactivo">Inactivo</option>

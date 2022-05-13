@@ -42,51 +42,53 @@ function registrarVenta()
             $tipo = $dato[2];
             $color = $dato[3];
             $numpas = $dato[4];
-            $precio = $dato[5];
-            $tventa = $dato[6];
-            $contacto = $dato[7];
-            if ($dato[8]) {
+            $cil = $dato[5];
+            $precio = $dato[6];
+            $tventa = $dato[7];
+            $contacto = $dato[8];
+            if ($dato[9]=="true") {
                 $ruat = "si";
             } else {
                 $ruat = "no";
             }
-            if ($dato[9]) {
+            if ($dato[10]=="true") {
                 $poliza = "si";
             } else {
                 $poliza = "no";
             }
-            if ($dato[10]) {
+            if ($dato[11]=="true") {
                 $soat = "si";
             } else {
                 $soat = "no";
             }
-            if ($dato[11]) {
+            if ($dato[12]=="true") {
                 $placa = "si";
             } else {
                 $placa = "no";
             }
-            if ($dato[12]) {
+            if ($dato[13]=="true") {
                 $transito = "si";
             } else {
                 $transito = "no";
             }
 
-            $sentencia2 = $con->prepare("INSERT INTO detalle_venta(venta,marca,modelo,tipo,color,nump,precio,tipo_venta,contacto,
-            ruat,poliza,soat,placa,resolucion) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
+            $sentencia2 = $con->prepare("INSERT INTO detalle_venta(venta,marca,modelo,tipo,color,nump,cilindrada,precio,tipo_venta,contacto,
+            ruat,poliza,soat,placa,resolucion) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?);");
             $sentencia2->bindParam(1, $idventa, PDO::PARAM_STR);
             $sentencia2->bindParam(2, $marca, PDO::PARAM_STR);
             $sentencia2->bindParam(3, $modelo, PDO::PARAM_STR);
             $sentencia2->bindParam(4, $tipo, PDO::PARAM_STR);
             $sentencia2->bindParam(5, $color, PDO::PARAM_STR);
             $sentencia2->bindParam(6, $numpas, PDO::PARAM_STR);
-            $sentencia2->bindParam(7, $precio, PDO::PARAM_STR);
-            $sentencia2->bindParam(8, $tventa, PDO::PARAM_STR);
-            $sentencia2->bindParam(9, $contacto, PDO::PARAM_STR);
-            $sentencia2->bindParam(10, $ruat, PDO::PARAM_STR);
-            $sentencia2->bindParam(11, $poliza, PDO::PARAM_STR);
-            $sentencia2->bindParam(12, $soat, PDO::PARAM_STR);
-            $sentencia2->bindParam(13, $placa, PDO::PARAM_STR);
-            $sentencia2->bindParam(14, $transito, PDO::PARAM_STR);
+            $sentencia2->bindParam(7, $cil, PDO::PARAM_STR);
+            $sentencia2->bindParam(8, $precio, PDO::PARAM_STR);
+            $sentencia2->bindParam(9, $tventa, PDO::PARAM_STR);
+            $sentencia2->bindParam(10, $contacto, PDO::PARAM_STR);
+            $sentencia2->bindParam(11, $ruat, PDO::PARAM_STR);
+            $sentencia2->bindParam(12, $poliza, PDO::PARAM_STR);
+            $sentencia2->bindParam(13, $soat, PDO::PARAM_STR);
+            $sentencia2->bindParam(14, $placa, PDO::PARAM_STR);
+            $sentencia2->bindParam(15, $transito, PDO::PARAM_STR);
             $resultado2 = $sentencia2->execute(); # Pasar en el mismo orden de los ?
 
         }

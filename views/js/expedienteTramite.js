@@ -1,22 +1,45 @@
 $(document).ready(function() {
     imagenes();
     var indice = 0;
+    var index;
     var idcliente = document.getElementById("id_cliente").value;
     var idusuario = document.getElementById("id_usuario").value;
     var matrizVehiculos = [];
     var botonaddAuto = document.getElementById('idAddAuto');
     botonaddAuto.addEventListener('click', insertarFila, true);
     var vehiculo = [];
-    registrarTramite();
+
 
 
     function insertarFila() {
         var marca = document.getElementById('marca_selec').value;
         var modelo = document.getElementById('modelo_selec').value;
+        var tipo = document.getElementById('tipo_selec').value;
         var color = document.getElementById('color_selec').value;
         var numpas = document.getElementById('numpas_selec').value;
+        var cilindrada = document.getElementById('cilindrada_selec').value;
         var precio = document.getElementById('precio_selec').value;
 
+        if (modelo.trim() == "Otro") {
+            modelo = document.getElementById('modelo_autoOtro').value;
+
+        }
+        if (tipo.trim() == "Otro") {
+            tipo = document.getElementById('tipo_autoOtro').value;
+
+        }
+        if (color.trim() == "Otro") {
+            color = document.getElementById('color_autoOtro').value;
+
+        }
+        if (numpas.trim() == "Otro") {
+            numpas = document.getElementById('num_autoOtro').value;
+
+        }
+        if (cilindrada.trim() == "Otro") {
+            cilindrada = document.getElementById('cilindrada_autoOtro').value;
+
+        }
         if (precio.trim() == "Otro") {
             precio = document.getElementById('precio_autoOtro').value;
 
@@ -36,8 +59,10 @@ $(document).ready(function() {
                 '&nbsp;&nbsp;<button type="button" class="btn botonElimina" id="idquitaV" name="quitaV" ><i class="far fa-trash-alt fa-xs"></i></button>';
             vehiculo.push(marca);
             vehiculo.push(modelo);
+            vehiculo.push(tipo);
             vehiculo.push(color);
             vehiculo.push(numpas);
+            vehiculo.push(cilindrada);
             vehiculo.push(precio);
             matrizVehiculos.splice(indice++, 0, { vehiculo });
             vehiculo = [];
@@ -78,7 +103,18 @@ $(document).ready(function() {
                         $("#numpas_selec").val($("#numpas_selec").data("Seleccionar"));
                         $("#precio_selec").val($("#precio_selec").data("Seleccionar"));
                         $("#precio_autoOtro").val($("#precio_autoOtro").data(""));
+                        $("#modelo_selec").val($("#modelo_selec").data("Seleccionar"));
+                        $("#modelo_autoOtro").val($("#modelo_autoOtro").data(""));
+                        $("#tipo_selec").val($("#tipo_selec").data("Seleccionar"));
+                        $("#tipo_autoOtro").val($("#tipo_autoOtro").data(""));
+                        $("#color_selec").val($("#color_selec").data("Seleccionar"));
+                        $("#color_autoOtro").val($("#color_autoOtro").data(""));
+                        $("#cilindrada_selec").val($("#cilindrada_selec").data("Seleccionar"));
+                        $("#cilindrada_autoOtro").val($("#cilindrada_autoOtro").data(""));
                         $('#precio_autoOtro').prop('disabled', true);
+                        $('#modelo_autoOtro').prop('disabled', true);
+                        $('#color_autoOtro').prop('disabled', true);
+                        $('#cilindrada_autoOtro').prop('disabled', true);
                     })
 
                 } else {
@@ -89,7 +125,18 @@ $(document).ready(function() {
                     $("#numpas_selec").val($("#numpas_selec").data("Seleccionar"));
                     $("#precio_selec").val($("#precio_selec").data("Seleccionar"));
                     $("#precio_autoOtro").val($("#precio_autoOtro").data(""));
+                    $("#modelo_selec").val($("#modelo_selec").data("Seleccionar"));
+                    $("#modelo_autoOtro").val($("#modelo_autoOtro").data(""));
+                    $("#tipo_selec").val($("#tipo_selec").data("Seleccionar"));
+                    $("#tipo_autoOtro").val($("#tipo_autoOtro").data(""));
+                    $("#color_selec").val($("#color_selec").data("Seleccionar"));
+                    $("#color_autoOtro").val($("#color_autoOtro").data(""));
+                    $("#cilindrada_selec").val($("#cilindrada_selec").data("Seleccionar"));
+                    $("#cilindrada_autoOtro").val($("#cilindrada_autoOtro").data(""));
                     $('#precio_autoOtro').prop('disabled', true);
+                    $('#modelo_autoOtro').prop('disabled', true);
+                    $('#color_autoOtro').prop('disabled', true);
+                    $('#cilindrada_autoOtro').prop('disabled', true);
                 }
 
             } else {
@@ -112,7 +159,18 @@ $(document).ready(function() {
                 $("#numpas_selec").val($("#numpas_selec").data("Seleccionar"));
                 $("#precio_selec").val($("#precio_selec").data("Seleccionar"));
                 $("#precio_autoOtro").val($("#precio_autoOtro").data(""));
+                $("#modelo_selec").val($("#modelo_selec").data("Seleccionar"));
+                $("#modelo_autoOtro").val($("#modelo_autoOtro").data(""));
+                $("#tipo_selec").val($("#tipo_selec").data("Seleccionar"));
+                $("#tipo_autoOtro").val($("#tipo_autoOtro").data(""));
+                $("#color_selec").val($("#color_selec").data("Seleccionar"));
+                $("#color_autoOtro").val($("#color_autoOtro").data(""));
+                $("#cilindrada_selec").val($("#cilindrada_selec").data("Seleccionar"));
+                $("#cilindrada_autoOtro").val($("#cilindrada_autoOtro").data(""));
                 $('#precio_autoOtro').prop('disabled', true);
+                $('#modelo_autoOtro').prop('disabled', true);
+                $('#color_autoOtro').prop('disabled', true);
+                $('#cilindrada_autoOtro').prop('disabled', true);
 
             } else {
                 Swal.fire(
@@ -126,10 +184,11 @@ $(document).ready(function() {
 
     }
     $(document).on('click', '#idquitaV', function(event) {
-        var index = $(this).closest("tr").index();
+        index = $(this).closest("tr").index();
         $(this).closest("tr").remove();
         matrizVehiculos.splice(index, 1);
         console.log(matrizVehiculos);
+        registrarTramite();
     });
 
     function imagenes() {
@@ -3092,7 +3151,7 @@ $(document).ready(function() {
                                         for (var i = 0; i < matrizVehiculos.length; i++) {
                                             var rev = Object.values(matrizVehiculos[i]);
                                             var arr = Object.values(rev[0]);
-                                            total = total + parseInt(arr[4], 10);
+                                            total = total + parseInt(arr[6], 10);
                                         }
                                         if (monto >= total) {
                                             var idusuario = document.getElementById("id_usuario").value;

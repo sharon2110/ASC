@@ -45,10 +45,10 @@ $proceso = $_GET['id'];
             <div class="container-fluid">
                 <ul class="opciones">
                     <li>
-                        <a href="nuevoAsesor.php" style="font-size:medium;"><i class="fas fa-plus fa-fw"></i> &nbsp; REGISTRAR ASESOR</a>
+                        <a href="nuevoAsesor.php" style="font-size:15.5px!important;"><i class="fas fa-plus fa-fw"></i> &nbsp; REGISTRAR ASESOR</a>
                     </li>
                     <li>
-                        <a href="listaAsesores.php" style="font-size:medium;"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE ASESORES</a>
+                        <a href="listaAsesores.php" style="font-size:15.5px!important;"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE ASESORES</a>
                     </li>
                 </ul>
             </div>
@@ -57,31 +57,31 @@ $proceso = $_GET['id'];
             <div class="container-fluid">
                 <form action="" class="formulario" autocomplete="off" id="act_asesor">
                     <fieldset>
-                        <legend style="font-size:large;"><i class="fas fa-user-plus"></i> &nbsp; Actualizar Asesor</legend>
+                        <legend><i class="fas fa-user-plus"></i> &nbsp; Actualizar Asesor</legend>
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-12 col-md-3">
                                     <div class="form-group">
                                         <label for="ci_asesor" class="bmd-label-floating">CI</label>
-                                        <input type="text" pattern="[0-9-]{5,20}" class="form-control" name="carnet_asesor" id="ci_asesorinput" maxlength="20" required style="font-size:15px;"> 
+                                        <input type="text" pattern="[0-9-]{5,20}" class="form-control" name="carnet_asesor" id="ci_asesorinput" maxlength="20" required style="font-size:14px;"> 
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-2">
                                     <div class="form-group">
                                         <label for="ci_extasesor" class="bmd-label-floating">Extensión</label>
-                                        <input type="text" pattern="[A-Z.]{1,5}" class="form-control" name="extension_asesor" id="ci_extasesorinput" maxlength="5" required style="font-size:15px;">
+                                        <input type="text" pattern="[A-Z.]{1,5}" class="form-control" name="extension_asesor" id="ci_extasesorinput" maxlength="5" required style="font-size:14px;">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-3">
                                     <div class="form-group">
                                         <label for="apP_asesor" class="bmd-label-floating">Apellido Paterno</label>
-                                        <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,50}" class="form-control" name="apellidoP_asesor" id="apP_asesor" maxlength="50" style="font-size:15px;">
+                                        <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,50}" class="form-control" name="apellidoP_asesor" id="apP_asesor" maxlength="50" style="font-size:14px;">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-3">
                                     <div class="form-group">
                                         <label for="apM_asesor" class="bmd-label-floating">Apellido Materno</label>
-                                        <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,50}" class="form-control" name="apellidoM_asesor" id="apM_asesor" maxlength="50" required style="font-size:15px;">
+                                        <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,50}" class="form-control" name="apellidoM_asesor" id="apM_asesor" maxlength="50" required style="font-size:14px;">
                                     </div>
                                 </div>
                             </div>
@@ -89,13 +89,13 @@ $proceso = $_GET['id'];
                                 <div class="col-12 col-md-3">
                                     <div class="form-group">
                                         <label for="nom_asesor" class="bmd-label-floating">Nombre</label>
-                                        <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,50}" class="form-control" name="nombre_asesor" id="nom_asesor" maxlength="50" required style="font-size:15px;">
+                                        <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,50}" class="form-control" name="nombre_asesor" id="nom_asesor" maxlength="50" required style="font-size:14px;">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-2">
                                     <div class="form-group">
                                         <label for="cel_asesor" class="bmd-label-floating">Celular</label>
-                                        <input type="text" pattern="[0-9()+]{8,16}" class="form-control" name="celular_asesor" id="cel_asesor" maxlength="16" required style="font-size:15px;">
+                                        <input type="text" pattern="[0-9()+]{8,16}" class="form-control" name="celular_asesor" id="cel_asesor" maxlength="16" required style="font-size:14px;">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4">

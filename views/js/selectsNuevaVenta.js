@@ -23,8 +23,14 @@ $(document).ready(function() {
     $('#modelo_selec').change(function() {
         recargarListaColores();
     });
+    $('#modelo_selec').change(function() {
+        recargarListaCilindrada();
+    });
     $('#modelo_selec').val();
     recargarListaColores();
+
+    $('#modelo_selec').val();
+    recargarListaCilindrada();
 
     $('#modelo_selec').change(function() {
         recargarListaPrecios();
@@ -62,6 +68,13 @@ $(document).ready(function() {
             $('#num_autoOtro').prop('disabled', false);
         } else {
             $('#num_autoOtro').prop('disabled', true);
+        }
+    })
+    $('#cilindrada_selec').change(function(e) {
+        if (($(this).val()).trim() === "Otro") {
+            $('#cilindrada_autoOtro').prop('disabled', false);
+        } else {
+            $('#cilindrada_autoOtro').prop('disabled', true);
         }
     })
 
@@ -134,6 +147,22 @@ $(document).ready(function() {
             success: function(r) {
                 //console.log(r);
                 $('#tipo_selec').html(r);
+            }
+        });
+    };
+
+    function recargarListaCilindrada() {
+        $.ajax({
+            type: "POST",
+            url: "../scripts/selectCilindrada.php",
+            data: {
+                "modelo": $('#modelo_selec').val(),
+                "marca": $('#marca_selec').val()
+            },
+            async: false,
+            success: function(r) {
+                //console.log(r);
+                $('#cilindrada_selec').html(r);
             }
         });
     };

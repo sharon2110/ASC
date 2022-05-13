@@ -42,16 +42,19 @@ $proceso = $_GET['id'];
             <div class="container-fluid">
                 <ul class="opciones">
                     <li>
-                        <a href="nuevaVenta.php" style="font-size:medium;"><i class="fas fa-plus fa-fw"></i> &nbsp;
+                        <a href="nuevaVenta.php" style="font-size:15.5px!important;"><i class="fas fa-plus fa-fw"></i>
+                            &nbsp;
                             REGISTRAR VENTA</a>
                     </li>
                     <li>
-                        <a href="listaVenta.php" style="font-size:medium;"><i class="fas fa-clipboard-list fa-fw"></i>
+                        <a href="listaVenta.php" style="font-size:15.5px!important;"><i
+                                class="fas fa-clipboard-list fa-fw"></i>
                             &nbsp; LISTA
                             DE VENTAS</a>
                     </li>
                     <li>
-                        <a href="buscaVenta.php" style="font-size:medium;"><i class="fas fa-search fa-fw"></i>&nbsp;
+                        <a href="buscaVenta.php" style="font-size:15.5px!important;"><i
+                                class="fas fa-search fa-fw"></i>&nbsp;
                             BUSCA VENTA</a>
                     </li>
                 </ul>
@@ -64,7 +67,7 @@ $proceso = $_GET['id'];
                 <form action="" class="formularioVenta" id="ac_reg_venta" autocomplete="off" method="POST"
                     enctype="multipart/form-data">
                     <fieldset>
-                        <legend style="font-size:larger;"><i class="fas fa-edit "></i> &nbsp; Editar venta</legend>
+                        <legend><i class="fas fa-edit "></i> &nbsp; Editar venta</legend>
                         <div class="container-fluid">
                             <input type="text" name="id" id="id_cliente" maxlength="16" value="" hidden>
                             <div class="row" style="text-align:center;">
@@ -147,7 +150,8 @@ $proceso = $_GET['id'];
                                 </div>
                                 <div class="col-6 col-md-2">
                                     <button class="btn btn-danger botonOpciones" type="button" data-bs-toggle="modal"
-                                        data-bs-target="#modalV" style="margin-left:25px;"><i class="fas fa-car fa-xs"></i></button>
+                                        data-bs-target="#modalV" style="margin-left:25px;"><i
+                                            class="fas fa-car fa-xs"></i></button>
                                 </div>
                                 <div class="col-6 col-md-2">
                                     <button class="btn btn-warning botonOpciones" type="button" data-bs-toggle="modal"
@@ -209,7 +213,7 @@ $proceso = $_GET['id'];
                                                                 id="idLabelBusMarca">Marca</label>
                                                             <input type="text" pattern="[a-zA-Z\s]{3,50}"
                                                                 class="form-control" name="marca" id="marcaid"
-                                                                maxlength="50" style="font-size:15px;">
+                                                                maxlength="50" style="font-size:14px;">
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-4">
@@ -219,7 +223,7 @@ $proceso = $_GET['id'];
                                                                 id="idLabelBusModelo">Modelo</label>
                                                             <input type="text" pattern="[a-zA-Z\s]{3,50}"
                                                                 class="form-control" name="modelo" id="modeloid"
-                                                                maxlength="50" style="font-size:15px;">
+                                                                maxlength="50" style="font-size:14px;">
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-4">
@@ -229,7 +233,7 @@ $proceso = $_GET['id'];
                                                                 id="idLabelBusModelo">Tipo</label>
                                                             <input type="text" pattern="[a-zA-Z\s]{3,50}"
                                                                 class="form-control" name="tipo" id="tipoid"
-                                                                maxlength="50" style="font-size:15px;">
+                                                                maxlength="50" style="font-size:14px;">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -241,7 +245,7 @@ $proceso = $_GET['id'];
                                                                 id="idLabelBusColor">Color</label>
                                                             <input type="text" pattern="[a-zA-Z\s]{3,50}"
                                                                 class="form-control" name="color" id="colorid"
-                                                                maxlength="50" style="font-size:15px;">
+                                                                maxlength="50" style="font-size:14px;">
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-4">
@@ -249,19 +253,19 @@ $proceso = $_GET['id'];
                                                             <label for="inputSearch"
                                                                 class="bmd-label-floating labelBusqueda"
                                                                 id="idLabelBusPas">#Pas</label>
-                                                            <input type="text" pattern="[0-9]{1,2}" required class="form-control"
-                                                                name="numpas" id="numpasid" maxlength="2"
-                                                                style="font-size:15px;">
+                                                            <input type="text" pattern="[0-9]{1,2}" required
+                                                                class="form-control" name="numpas" id="numpasid"
+                                                                maxlength="2" style="font-size:14px;">
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-4">
                                                         <div class="form-group">
                                                             <label for="inputSearch"
                                                                 class="bmd-label-floating labelBusqueda"
-                                                                id="idLabelBusPrecio">Precio</label>
-                                                            <input type="text" pattern="[0-9]{5,7}" class="form-control"
-                                                                name="precio" id="precioid" maxlength="7"
-                                                                style="font-size:15px;">
+                                                                id="idLabelBusPas">Cil.</label>
+                                                            <input type="text" pattern="[a-zA-Z0-9]{5,8}" required
+                                                                class="form-control" name="cil" id="cilid" maxlength="8"
+                                                                style="font-size:14px;">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -270,9 +274,19 @@ $proceso = $_GET['id'];
                                                         <div class="form-group">
                                                             <label for="inputSearch"
                                                                 class="bmd-label-floating labelBusqueda"
+                                                                id="idLabelBusPrecio">Precio</label>
+                                                            <input type="text" pattern="[0-9]{5,7}" class="form-control"
+                                                                name="precio" id="precioid" maxlength="7"
+                                                                style="font-size:14px;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-4">
+                                                        <div class="form-group">
+                                                            <label for="inputSearch"
+                                                                class="bmd-label-floating labelBusqueda"
                                                                 id="idLabelBusTippVenta">Tipo Venta</label>
                                                             <select name="tipoventa" class="form-select"
-                                                                id="tipoVenta_selecid" style="font-size:15px;">
+                                                                id="tipoVenta_selecid" style="font-size:14px;">
                                                                 <option value="" selected>Seleccionar</option>
                                                                 <option value="Al contado">Al contado</option>
                                                                 <option value="Con crédito">Con crédito</option>
@@ -285,7 +299,7 @@ $proceso = $_GET['id'];
                                                                 class="bmd-label-floating labelBusqueda">Conyuge</label>
                                                             <input type="text" pattern="[a-zA-Z]{10,150}"
                                                                 class="form-control" name="contacto" id="contactoid"
-                                                                disabled maxlength="150" style="font-size:15px;">
+                                                                disabled maxlength="150" style="font-size:14px;">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -368,7 +382,9 @@ $proceso = $_GET['id'];
                                                 </div>
                                                 <p class="text-center" style="margin-top: 40px; text-align:center;">
                                                     <button type="button" class="btn btn-success" name="editV"
-                                                        id="idEditVe" style="margin:auto;font-size:15px;padding: 5px;">Guardar </button>
+                                                        id="idEditVe"
+                                                        style="margin:auto;font-size:15px;padding: 5px;">Guardar
+                                                    </button>
                                                 </p>
 
                                             </div>
@@ -381,8 +397,7 @@ $proceso = $_GET['id'];
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" style="font-size:16px;">Características y
-                                                documentos del vehiculo</h5>
+                                            <h5 class="modal-title" style="font-size:16px;">Añadir vehiculo</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>
                                         </div>
@@ -398,7 +413,7 @@ $proceso = $_GET['id'];
                                                                 class="bmd-label-floating labelBusqueda"
                                                                 id="idLabelBusMarca">Marca</label>
                                                             <select name="tipoMarca" class="form-select"
-                                                                id="marca_selec" style="font-size:15px;">
+                                                                id="marca_selec" style="font-size:14px;">
                                                                 <option value="" selected>Seleccionar</option>
                                                                 <?php
                                                                 require_once '../scripts/conexion.php';
@@ -421,7 +436,7 @@ $proceso = $_GET['id'];
                                                                 class="bmd-label-floating labelBusqueda"
                                                                 id="idLabelBusModelo">Modelo</label>
                                                             <select name="modelo" class="form-select" id="modelo_selec"
-                                                                style="font-size:15px;">
+                                                                style="font-size:14px;">
                                                                 <option value="" selected>Seleccionar</option>
                                                             </select>
                                                         </div>
@@ -433,103 +448,125 @@ $proceso = $_GET['id'];
                                                             <input type="text" pattern="[a-zA-Z\s]{3,50}"
                                                                 class="form-control" name="modelo_otro"
                                                                 id="modelo_autoOtro" maxlength="50" disabled
-                                                                style="font-size:15px;">
+                                                                style="font-size:14px;">
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-md-4">
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 col-md-3">
                                                         <div class="form-group">
                                                             <label for="inputSearch"
                                                                 class="bmd-label-floating labelBusqueda"
                                                                 id="idLabelBusModelo">Tipo</label>
                                                             <select name="tipo" class="form-select" id="tipo_selec"
-                                                                style="font-size:15px;">
+                                                                style="font-size:14px;">
                                                                 <option value="" selected>Seleccionar</option>
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-md-4">
+                                                    <div class="col-12 col-md-3">
                                                         <div class="form-group">
                                                             <label for="modelo_otro"
                                                                 class="bmd-label-floating labelBusqueda">Otro</label>
                                                             <input type="text" pattern="[a-zA-Z\s]{3,50}"
                                                                 class="form-control" name="tipo_otro" id="tipo_autoOtro"
-                                                                maxlength="50" disabled style="font-size:15px;">
+                                                                maxlength="50" disabled style="font-size:14px;">
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-12 col-md-4">
+                                                    <div class="col-12 col-md-3">
                                                         <div class="form-group">
                                                             <label for="inputSearch"
                                                                 class="bmd-label-floating labelBusqueda"
                                                                 id="idLabelBusColor">Color</label>
                                                             <select name="color" class="form-select" id="color_selec"
-                                                                style="font-size:15px;">
+                                                                style="font-size:14px;">
                                                                 <option value="" selected>Seleccionar</option>
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-md-4">
+                                                    <div class="col-12 col-md-3">
                                                         <div class="form-group">
                                                             <label for="color_otro"
                                                                 class="bmd-label-floating labelBusqueda">Otro</label>
                                                             <input type="text" pattern="[a-zA-Z\s]{4,50}"
                                                                 class="form-control" name="color_otro"
                                                                 id="color_autoOtro" maxlength="50" disabled
-                                                                style="font-size:15px;">
+                                                                style="font-size:14px;">
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-md-4">
+
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 col-md-3">
                                                         <div class="form-group">
                                                             <label for="inputSearch"
                                                                 class="bmd-label-floating labelBusqueda"
                                                                 id="idLabelBusPas">#Pas</label>
                                                             <select name="numpas" class="form-select" id="numpas_selec"
-                                                                style="font-size:15px;">
+                                                                style="font-size:14px;">
                                                                 <option value="" selected>Seleccionar</option>
                                                             </select>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-12 col-md-4">
+                                                    <div class="col-12 col-md-3">
                                                         <div class="form-group">
                                                             <label for="modelo_otro"
                                                                 class="bmd-label-floating labelBusqueda">Otro</label>
                                                             <input type="text" pattern="[0-9]{1,2}" class="form-control"
                                                                 name="num_otro" id="num_autoOtro" maxlength="2" disabled
-                                                                style="font-size:15px;">
+                                                                style="font-size:14px;">
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-md-4">
+                                                    <div class="col-12 col-md-3">
+                                                        <div class="form-group">
+                                                            <label for="inputSearch"
+                                                                class="bmd-label-floating labelBusqueda"
+                                                                id="idLabelBusCilindrada">Cil.</label>
+                                                            <select name="cilindrada" class="form-select"
+                                                                id="cilindrada_selec" style="font-size:14px;">
+                                                                <option value="" selected>Seleccionar</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-3">
+                                                        <div class="form-group">
+                                                            <label for="cilindrada_otro"
+                                                                class="bmd-label-floating labelBusqueda">Otro</label>
+                                                            <input type="text" pattern="[a-zA-Z0-9/.s]{4,8}"
+                                                                class="form-control" name="cilindrada_otro"
+                                                                id="cilindrada_autoOtro" maxlength="8" disabled
+                                                                style="font-size:14px;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 col-md-3">
                                                         <div class="form-group">
                                                             <label for="inputSearch"
                                                                 class="bmd-label-floating labelBusqueda"
                                                                 id="idLabelBusPrecio">Precio</label>
                                                             <select name="precio" class="form-select" id="precio_selec"
-                                                                style="font-size:15px;">
+                                                                style="font-size:14px;">
                                                                 <option value="" selected>Seleccionar</option>
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-md-4">
+                                                    <div class="col-12 col-md-3">
                                                         <div class="form-group">
                                                             <label for="precio_otro"
                                                                 class="bmd-label-floating labelBusqueda">Otro</label>
                                                             <input type="text" pattern="[0-9]{5,6}" class="form-control"
                                                                 name="precio_otro" id="precio_autoOtro" maxlength="6"
-                                                                disabled style="font-size:15px;">
+                                                                disabled style="font-size:14px;">
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-12 col-md-4">
+                                                    <div class="col-12 col-md-3">
                                                         <div class="form-group">
                                                             <label for="inputSearch"
                                                                 class="bmd-label-floating labelBusqueda"
                                                                 id="idLabelBusTippVenta">Tipo Venta</label>
                                                             <select name="tipoVenta" class="form-select"
-                                                                id="tipoVenta_selec" style="font-size:15px;">
+                                                                id="tipoVenta_selec" style="font-size:14px;">
                                                                 <option value="" selected>Seleccionar</option>
                                                                 <option value="Al contado">Al contado</option>
                                                                 <option value="Con crédito">Con crédito</option>
@@ -537,13 +574,13 @@ $proceso = $_GET['id'];
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-12 col-md-4">
+                                                    <div class="col-12 col-md-3">
                                                         <div class="form-group">
                                                             <label for="contacto"
                                                                 class="bmd-label-floating labelBusqueda">Conyuge</label>
                                                             <input type="text" pattern="[a-zA-Z]{10,150}"
                                                                 class="form-control" name="contacto" id="idContacto"
-                                                                maxlength="150" disabled style="font-size:15px;">
+                                                                maxlength="150" disabled style="font-size:14px;">
                                                         </div>
                                                     </div>
                                                 </div>

@@ -30,15 +30,13 @@ if ($resultado === true) {
     $v = (explode(',', $vehiculo));
     $marca = $v[0];
     $modelo = $v[1];
-    $color = $v[2];
-    $numpas = $v[3];
-    $precio = $v[4];
-    $sentencia2 = $con->prepare("SELECT tipo FROM vehiculo WHERE marca=? and modelo=?");
-    $sentencia2->execute([$marca, $modelo]);
-    $resultado2 = $sentencia2->fetch();
-    $tipo =  $resultado2["tipo"];
-    $sentencia2 = $con->prepare("INSERT INTO detalle_tramite(tramite,marca,modelo,tipo,color,nump,precio) VALUES (?, ?, ?, ?, ?, ?, ?);");
-    $resultado2 = $sentencia2->execute([$idtramite, $marca, $modelo, $tipo, $color, $numpas, $precio]); #
+    $tipo = $v[2];
+    $color = $v[3];
+    $numpas = $v[4];
+    $cilindrada = $v[5];
+    $precio = $v[6];
+    $sentencia2 = $con->prepare("INSERT INTO detalle_tramite(tramite,marca,modelo,tipo,color,nump,cilindrada, precio) VALUES (?, ?, ?, ?, ?, ?, ?,?);");
+    $resultado2 = $sentencia2->execute([$idtramite, $marca, $modelo, $tipo, $color, $numpas, $cilindrada, $precio]); #
   }
   date_default_timezone_set('Etc/GMT-6');
   $hora = date('h:i:s:A', time() + 43200);

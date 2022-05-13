@@ -39,17 +39,17 @@ if ($tusu !== "Administrador") {
             <div class="container-fluid">
                 <ul class="opciones">
                     <li>
-                        <a class="active" href="nuevaMovilidad.php" style="font-size:medium;"><i
+                        <a class="active" href="nuevaMovilidad.php" style="font-size:15.5px!important;"><i
                                 class="fas fa-plus fa-fw"></i> &nbsp; REGISTRAR
                             VEHÍCULO</a>
                     </li>
                     <li>
-                        <a href="listaMovilidad.php" style="font-size:medium;"><i
+                        <a href="listaMovilidad.php" style="font-size:15.5px!important;"><i
                                 class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE
                             VEHÍCULOS</a>
                     </li>
                     <li>
-                        <a href="busquedaMovilidad.php" style="font-size:medium;"><i class="fas fa-search fa-fw"></i>
+                        <a href="busquedaMovilidad.php" style="font-size:15.5px!important;"><i class="fas fa-search fa-fw"></i>
                             &nbsp; BUSCAR VEHÍCULO</a>
                     </li>
                 </ul>
@@ -59,7 +59,7 @@ if ($tusu !== "Administrador") {
             <div class="container-fluid">
                 <form action="" class="formularioRegMovilidad" autocomplete="off" id="registroAuto">
                     <fieldset>
-                        <legend style="font-size:large;"><i class="fas fa-car-side"></i> &nbsp; Nuevo Vehículo</legend>
+                        <legend><i class="fas fa-car-side"></i> &nbsp; Nuevo Vehículo</legend>
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-12 col-md-3">
@@ -104,7 +104,7 @@ if ($tusu !== "Administrador") {
                                     <div class="form-group">
                                         <label for="marca_auto" class="bmd-label-floating">Marca</label>
                                         <select class="form-select" aria-label="Default select example" required
-                                            name="seleccion_marca" id="selecmarca" style="font-size:15px;">
+                                            name="seleccion_marca" id="selecmarca" style="font-size:14px;">
                                             <option value="" selected>Seleccionar</option>
                                             <option value="Cherry">Cherry</option>
                                             <option value="Foton">Foton</option>
@@ -124,14 +124,14 @@ if ($tusu !== "Administrador") {
                                         <label for="marca_otro" class="bmd-label-floating">Otro</label>
                                         <input type="text" pattern="[a-zA-Z\s.-]{3,50}" class="form-control" required
                                             name="marca_otro" id="marca_autoOtro" maxlength="50" disabled
-                                            style="font-size:15px;">
+                                            style="font-size:14px;">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-3">
                                     <div class="form-group">
                                         <label for="tipo_auto" class="bmd-label-floating">Tipo</label>
                                         <select class="form-select" aria-label="Default select example" required
-                                            name="seleccion_tipo" id="selectipo" style="font-size:15px;">
+                                            name="seleccion_tipo" id="selectipo" style="font-size:14px;">
                                             <option value="" selected>Seleccionar</option>
                                             <option value="Camión">Camión</option>
                                             <option value="Minibus">Minibus</option>
@@ -145,7 +145,7 @@ if ($tusu !== "Administrador") {
                                         <label for="tipo_otro" class="bmd-label-floating">Otro</label>
                                         <input type="text" pattern="[a-zA-Z\s.-]{5,50}" class="form-control" required
                                             name="tipo_otro" id="tipo_Otro" maxlength="50" disabled
-                                            style="font-size:15px;">
+                                            style="font-size:14px;">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-3">
@@ -153,7 +153,7 @@ if ($tusu !== "Administrador") {
                                         <label for="modelo_movi" class="bmd-label-floating">Modelo</label>
                                         <input type="text" pattern="[a-zA-Z0-9\s.-]{3,50}" class="form-control" required
                                             name="modelo_movi" id="modelo_movi input" maxlength="50" requered
-                                            style="font-size:15px;">
+                                            style="font-size:14px;">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-3">
@@ -161,7 +161,7 @@ if ($tusu !== "Administrador") {
                                         <label for="num_pasamovi" class="bmd-label-floating">Nro. Pasajeros</label>
                                         <input type="text" pattern="[0-9]{1,3}" class="form-control" required
                                             name="num_pasamovi" id="num_pasamovi input" maxlength="3" requered
-                                            style="font-size:15px;">
+                                            style="font-size:14px;">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-2">
@@ -169,7 +169,7 @@ if ($tusu !== "Administrador") {
                                         <label for="cil_movi" class="bmd-label-floating">Cilindrada</label>
                                         <input type="text" pattern="[a-zA-Z0-9\s.]{4,8}" required class="form-control"
                                             name="cil_movi" id="cil_movi input" maxlength="10" requered
-                                            style="font-size:15px;">
+                                            style="font-size:14px;">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-2" style="margin-top:30px;">

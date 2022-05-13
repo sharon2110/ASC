@@ -78,13 +78,14 @@
     padding: 15px;
     border-radius: 3px;
     margin: auto;
-    margin-bottom: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
     color: rgb(0, 0, 0);
-    width: 90%;
+    width: 80%;
 }
 
 .titulo {
-    margin-top: 25px!important;
+    margin-top: 15px!important;
     padding-bottom: 0px;
     font-size: 13px!important;
 }
@@ -94,6 +95,10 @@ label {
     padding-top: 0px;
     margin-bottom: 0;
     font-size: 13px!important;
+}
+
+legend {
+    font-size: 17px!important;
 }
 
 .contenedorTablaBus {
@@ -298,7 +303,7 @@ body main section {
 /*--------------------ESTILO LISTA TRAMITES-------------------------------------------- */
 
 .tabla {
-    width: 100%;
+    width: 95%;
     margin: auto;
 }
 
@@ -456,12 +461,12 @@ body main section {
 .busqueda {
     background-color: rgb(222, 222, 222);
     border-radius: 2px;
-    width: 100%;
+    width: 95%;
     margin: auto;
     padding-top: 5px;
     margin-bottom: 50px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 20px;
+    margin-right: 40px;
 }
 
 .labelBusqueda {

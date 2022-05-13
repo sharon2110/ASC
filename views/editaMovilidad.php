@@ -46,14 +46,14 @@ $proceso = $_GET['id'];
             <div class="container-fluid">
                 <ul class="opciones">
                     <li>
-                        <a href="nuevaMovilidad.php" style="font-size:medium;"><i class="fas fa-plus fa-fw"></i> &nbsp; REGISTRAR VEHICULO</a>
+                        <a href="nuevaMovilidad.php" style="font-size:15.5px!important;"><i class="fas fa-plus fa-fw"></i> &nbsp; REGISTRAR VEHICULO</a>
                     </li>
                     <li>
-                        <a href="listaMovilidad.php" style="font-size:medium;"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE
+                        <a href="listaMovilidad.php" style="font-size:15.5px!important;"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE
                             VEHÍCULOS</a>
                     </li>
                     <li>
-                        <a href="busquedaMovilidad.php" style="font-size:medium;"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR VEHÍCULO</a>
+                        <a href="busquedaMovilidad.php" style="font-size:15.5px!important;"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR VEHÍCULO</a>
                     </li>
                 </ul>
             </div>
@@ -62,7 +62,7 @@ $proceso = $_GET['id'];
             <div class="container-fluid">
                 <form action="" class="formularioRegMovilidad" autocomplete="off" id="actualizaAuto">
                     <fieldset>
-                        <legend style="font-size:large;"><i class="fas fa-car-side"></i> &nbsp; Editar Movilidad</legend>
+                        <legend><i class="fas fa-car-side"></i> &nbsp; Editar Movilidad</legend>
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-12 col-md-3">

@@ -11,8 +11,10 @@ $(document).ready(function() {
 
         var marca = document.getElementById('marca_selec').value;
         var modelo = document.getElementById('modelo_selec').value;
+        var tipo = document.getElementById('tipo_selec').value;
         var color = document.getElementById('color_selec').value;
         var numpas = document.getElementById('numpas_selec').value;
+        var cilindrada = document.getElementById('cilindrada_selec').value;
         var precio = document.getElementById('precio_selec').value;
         var tventa = document.getElementById('tipoVenta_selec').value;
         var contacto = document.getElementById('idContacto').value;
@@ -25,12 +27,20 @@ $(document).ready(function() {
             modelo = document.getElementById('modelo_autoOtro').value;
 
         }
+        if (tipo.trim() == "Otro") {
+            tipo = document.getElementById('tipo_autoOtro').value;
+
+        }
         if (color.trim() == "Otro") {
             color = document.getElementById('color_autoOtro').value;
 
         }
         if (numpas.trim() == "Otro") {
             numpas = document.getElementById('num_autoOtro').value;
+
+        }
+        if (cilindrada.trim() == "Otro") {
+            cilindrada = document.getElementById('cilindrada_autoOtro').value;
 
         }
         if (precio.trim() == "Otro") {
@@ -42,7 +52,7 @@ $(document).ready(function() {
 
         }
         if (matrizVehiculos.length > 0) {
-            if (marca != "" && modelo != "" && color != "" && numpas != "" && precio != "" && tventa != "" && contacto != "" && ruat && poliza && placa && transito) {
+            if (marca != "" && modelo != "" && color != "" && numpas != "" && precio != "" && tventa != "" && contacto != "") {
                 if (verificaEnMatriz()) {
                     Swal.fire({
                         title: 'Esta segur@ de agregar?',
@@ -84,7 +94,7 @@ $(document).ready(function() {
 
         } else {
 
-            if (marca != "" && modelo != "" && color != "" && numpas != "" && precio != "" && tventa != "" && contacto != "" && ruat && poliza && placa && transito) {
+            if (marca != "" && modelo != "" && color != "" && numpas != "" && precio != "" && tventa != "" && contacto != "") {
                 if (tventa.trim() == "Con crédito") {
                     verificaContrato();
                 } else {
@@ -123,8 +133,10 @@ $(document).ready(function() {
             }
             vehiculo.push(marca);
             vehiculo.push(modelo);
+            vehiculo.push(tipo);
             vehiculo.push(color);
             vehiculo.push(numpas);
+            vehiculo.push(cilindrada);
             vehiculo.push(precio);
             vehiculo.push(tventa);
             vehiculo.push(contacto);
@@ -140,9 +152,11 @@ $(document).ready(function() {
             $("#modelo_selec").val($("#modelo_selec").data("Seleccionar"));
             $("#color_selec").val($("#color_selec").data("Seleccionar"));
             $("#numpas_selec").val($("#numpas_selec").data("Seleccionar"));
+            $("#cilindrada_selec").val($("#cilindrada_selec").data("Seleccionar"));
             $("#precio_selec").val($("#precio_selec").data("Seleccionar"));
             $("#tipoVenta_selec").val($("#tipoVenta_selec").data("Seleccionar"));
             $("#precio_autoOtro").val($("#precio_autoOtro").data(""));
+            $("#cilindrada_autoOtro").val($("#cilindrada_autoOtro").data(""));
             $('#precio_autoOtro').prop('disabled', true);
             $("#idContacto").val($("#idContacto").data(""));
             $('#idContacto').prop('disabled', true);

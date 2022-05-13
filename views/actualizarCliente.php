@@ -43,13 +43,13 @@ $proceso = $_GET['id'];
             <div class="container-fluid">
                 <ul class="opciones">
                     <li>
-                        <a href="nuevoCliente.php" style="font-size:medium;"><i class="fas fa-plus fa-fw"></i> &nbsp; REGISTRAR CLIENTE</a>
+                        <a href="nuevoCliente.php" style="font-size:15.5px!important;"><i class="fas fa-plus fa-fw"></i> &nbsp; REGISTRAR CLIENTE</a>
                     </li>
                     <li>
-                        <a href="listaClientes.php" style="font-size:medium;"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE CLIENTES</a>
+                        <a href="listaClientes.php" style="font-size:15.5px!important;"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE CLIENTES</a>
                     </li>
                     <li>
-                        <a href="buscarCliente.php" style="font-size:medium;"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR CLIENTE</a>
+                        <a href="buscarCliente.php" style="font-size:15.5px!important;"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR CLIENTE</a>
                     </li>
                 </ul>
             </div>
@@ -64,65 +64,64 @@ $proceso = $_GET['id'];
                                 <div class="col-12 col-md-3">
                                     <div class="form-group">
                                         <label for="ci_cliente" class="bmd-label-floating" style="font-size:14px;  color: rgb(136, 139, 143);">CI</label>
-                                        <input type="text" pattern="[0-9]{5,15}" class="form-control" name="carnet_cliente" id="ci_cliente" maxlength="15" style="font-size:15px;">
+                                        <input type="text" pattern="[0-9]{5,15}" class="form-control" name="carnet_cliente" id="ci_cliente" maxlength="15" style="font-size:14px;">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-2">
                                     <div class="form-group">
-                                        <label for="ci_extcliente" class="bmd-label-floating" style="font-size:14px;  color: rgb(136, 139, 143);">Extensión</label>
-                                        <input type="text" pattern="[A-Z.]{1,4}" class="form-control" name="extension_cliente" id="ci_cliente_ext" maxlength="4" style="font-size:15px;">
+                                        <label for="ci_extcliente" class="bmd-label-floating" style="font-size:14px;  color: rgb(136, 139, 143);">Ext.</label>
+                                        <input type="text" pattern="[A-Z.]{1,4}" class="form-control" name="extension_cliente" id="ci_cliente_ext" maxlength="4" style="font-size:14px;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <div class="form-group">
+                                        <label for="apP_cliente" class="bmd-label-floating" style="font-size:14px;  color: rgb(136, 139, 143);">Paterno</label>
+                                        <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,50}" class="form-control" name="apellidoP_cliente" id="apP_cliente" maxlength="50" style="font-size:14px;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <div class="form-group">
+                                        <label for="apM_cliente" class="bmd-label-floating" style="font-size:14px;  color: rgb(136, 139, 143);">Materno</label>
+                                        <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,50}" class="form-control" name="apellidoM_cliente" id="apM_cliente" maxlength="50" style="font-size:14px;">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-12 col-md-4">
-                                    <div class="form-group">
-                                        <label for="apP_cliente" class="bmd-label-floating" style="font-size:14px;  color: rgb(136, 139, 143);">Apellido Paterno</label>
-                                        <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,50}" class="form-control" name="apellidoP_cliente" id="apP_cliente" maxlength="50" style="font-size:15px;">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-4">
-                                    <div class="form-group">
-                                        <label for="apM_cliente" class="bmd-label-floating" style="font-size:14px;  color: rgb(136, 139, 143);">Apellido Materno</label>
-                                        <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,50}" class="form-control" name="apellidoM_cliente" id="apM_cliente" maxlength="50" style="font-size:15px;">
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-md-4">
+                                <div class="col-12 col-md-3">
                                     <div class="form-group">
                                         <label for="nom_cliente" class="bmd-label-floating" style="font-size:14px;  color: rgb(136, 139, 143);">Nombre</label>
-                                        <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,50}" class="form-control" name="nombre_cliente" id="nom_cliente" maxlength="50" required style="font-size:15px;">
+                                        <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,50}" class="form-control" name="nombre_cliente" id="nom_cliente" maxlength="50" required style="font-size:14px;">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-md-4">
+                                <div class="col-12 col-md-2">
                                     <div class="form-group">
                                         <label for="cel_cliente" class="bmd-label-floating" style="font-size:14px;  color: rgb(136, 139, 143);">Celular</label>
-                                        <input type="text" pattern="[0-9()+\s]{8,15}" class="form-control" name="celular_cliente" id="cel_cliente" maxlength="15" style="font-size:15px;">
+                                        <input type="text" pattern="[0-9()+\s]{8,15}" class="form-control" name="celular_cliente" id="cel_cliente" maxlength="15" style="font-size:14px;">
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4">
+                                <div class="col-12 col-md-3">
                                     <div class="form-group">
                                         <label for="dir_cliente" class="bmd-label-floating" style="font-size:14px;  color: rgb(136, 139, 143);">Dirección</label>
-                                        <input type="text" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,#\s-]{10,100}" class="form-control" name="direccion_cliente" id="dir_cliente" maxlength="100" required style="font-size:15px;">
+                                        <input type="text" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,#\s-]{10,100}" class="form-control" name="direccion_cliente" id="dir_cliente" maxlength="100" required style="font-size:14px;">
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4">
+                                <div class="col-12 col-md-3">
                                     <div class="form-group">
-                                        <label for="dir_cliente" class="bmd-label-floating" style="font-size:14px;  color: rgb(136, 139, 143);">Tipo Empleo</label>
-                                        <select name="tipoEmpleoSel" class="form-select" id="empleo" style="font-size:15px;">
+                                        <label for="dir_cliente" class="bmd-label-floating" style="font-size:14px;  color: rgb(136, 139, 143);">Empleo</label>
+                                        <select name="tipoEmpleoSel" class="form-select" id="empleo" style="font-size:14px;">
                                             <option value="1">Asalariado</option>
                                             <option value="2">Comerciante</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
+                            <div class="row">
+                            </div>
                             <?php if($tusu=="Administrador"): echo '
                             <div class="row">
                                 <div class="col-12 col-md-4">
-                                <label for="asesor_cliente" class="bmd-label-floating" style="font-size:14px;  color: rgb(136, 139, 143);">Asesor</label>
-                                <select name="asesorCliente" class="form-select" id="asesor" style="font-size:15px;">';?>
+                                <label for="asesor_cliente" class="bmd-label-floating" style="font-size:13px;  color: rgb(136, 139, 143);">Asesor</label>
+                                <select name="asesorCliente" class="form-select" id="asesor" style="font-size:14px;">';?>
                                     <?php
                                     include "../scripts/conexion.php";
                                     $sentencia = $con->prepare("SELECT u.idusuario,u.nombre,u.paterno,u.materno from usuario u order by u.paterno");

@@ -37,16 +37,16 @@ if($usuario==null || $usuario=="" || $estado!="Activo"){
             <div class="container-fluid">
                 <ul class="opciones">
                     <li>
-                        <a href="nuevoCliente.php" style="font-size:medium;"><i class="fas fa-plus fa-fw"></i> &nbsp; REGISTRAR
+                        <a href="nuevoCliente.php" style="font-size:15.5px!important;"><i class="fas fa-plus fa-fw"></i> &nbsp; REGISTRAR
                             CLIENTE</a>
                     </li>
                     <li>
-                        <a class="active" href="listaClientes.php" style="font-size:medium;"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp;
+                        <a class="active" href="listaClientes.php" style="font-size:15.5px!important;"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp;
                             LISTA DE
                             CLIENTES</a>
                     </li>
                     <li>
-                        <a href="buscarCliente.php" style="font-size:medium;"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR CLIENTE</a>
+                        <a href="buscarCliente.php" style="font-size:15.5px!important;"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR CLIENTE</a>
                     </li>
                 </ul>
             </div>
@@ -59,7 +59,7 @@ if($usuario==null || $usuario=="" || $estado!="Activo"){
                 <div class="table-responsive contenedorTabla">
                     <table class="table table-sm tabla">
                         <thead>
-                            <tr class="text-center" style="font-size:14px;">
+                            <tr class="text-center" style="font-size:13.5px;">
                                 <th>#</th>
                                 <th>CI</th>
                                 <th>Paterno</th>
@@ -81,7 +81,7 @@ if($usuario==null || $usuario=="" || $estado!="Activo"){
                                 foreach ($sentencia as $cliente) :
 
                             ?>
-                                    <tr class="text-center" style="font-size:14px;">
+                                    <tr class="text-center" style="font-size:13.5px;">
                                         <td><?php
                                             echo $cont;
                                             $cont = $cont + 1;

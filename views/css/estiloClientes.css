@@ -65,7 +65,7 @@
 /* FORMULARIO DE REGISTRO */
 
 legend {
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .formulario {
@@ -75,7 +75,8 @@ legend {
     border-radius: 3px;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
+    width: 80%;
     margin-top: 0;
 }
 
@@ -83,7 +84,7 @@ label {
     color: rgb(109, 106, 106);
     padding-top: 10px;
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: 13px !important;
 }
 
 body main section {
