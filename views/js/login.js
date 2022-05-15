@@ -68,7 +68,7 @@ function inicio_sesion(evento) {
     formact = $("#formlogin");
     var usuario = new FormData($(formact)[0]);
     $.ajax({
-        url: '../scripts/inicio_sesion.php',
+        url: 'scripts/inicio_sesion.php',
         type: 'POST',
         data: usuario,
         contentType: false,
@@ -78,7 +78,7 @@ function inicio_sesion(evento) {
     }).done(function(res) {
         console.log(res);
         if (res.trim() == "SI") {
-            window.location.href = "./home.php";
+            window.location.href = "views/home.php";
         } else {
             alert("Datos incorrectos o estado inactivo");
             window.location.href = "./index.php";
