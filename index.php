@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="views/css/estiloIndex.css">
     <link rel="stylesheet" href="views/css/all.css">
 
-    <title>ASCMotorsDigital_CLONADO_</title>
+    <title>ASCMotorsDigital_CHANGES TO PRACTICE GIT</title>
 </head>
 
 <body>
