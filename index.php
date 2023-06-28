@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="views/css/estiloIndex.css">
     <link rel="stylesheet" href="views/css/all.css">
 
-    <title>ASCMotorsDigital_CHANGES IN OTHER BRANCH</title>
+    <title>ASCMotorsDigital_CHANGES FROM MAIN TO OTHER BRANCH</title>
 </head>
 
 <body>
